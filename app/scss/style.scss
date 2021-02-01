@@ -1,2 +1,44 @@
 @import "variables";
 @import "globals";
+
+body {
+    background-color: $Darkcyan;
+}
+.container {
+    display: flex;
+    position: absolute;
+    width: 20.375rem;
+    height: 23.375rem;
+    margin: auto;
+    margin-top: 9.25rem;
+    background-color: $white;
+    border-radius: 1rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-flow: column;
+}
+
+.card-header {
+    position: absolute;
+    height: 8.75rem;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.avatar {
+    position: absolute;
+    background-color: $white;
+    width: 6.65rem;
+    height: 6.65rem;
+    border-radius: 3.325rem;
+    padding: 0.325rem;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5.425rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
