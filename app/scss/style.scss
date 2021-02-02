@@ -1,27 +1,36 @@
 @import "variables";
 @import "globals";
 
+@media screen and (min-width: 376px) {
+    body {
+        background-position-x: -15rem, 40rem;
+        background-position-y: -38rem, 23rem;
+    }
+  }
+
+@media screen and (max-width: 375px) {
+    body {
+        background-position-x: -47rem, 10.3125rem;
+        background-position-y: -38rem, 18rem;
+    }
+}
+
 body {
     background-color: $Darkcyan;
+    background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    display: flex;
+    justify-content: center;
 }
 .container {
-    display: flex;
     position: absolute;
     width: 20.375rem;
     height: 23.375rem;
-    margin: auto;
     margin-top: 9.25rem;
-    background-color: $white;
-    border-radius: 1rem;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    flex-flow: column;
+    line-height: 0;
 }
 
 .card-header {
-    position: absolute;
     height: 8.75rem;
     width: 100%;
     border-top-left-radius: 1rem;
@@ -30,15 +39,85 @@ body {
 
 .avatar {
     position: absolute;
-    background-color: $white;
+    z-index: 1;
     width: 6.65rem;
     height: 6.65rem;
-    border-radius: 3.325rem;
-    padding: 0.325rem;
     margin-left: auto;
     margin-right: auto;
     top: 5.425rem;
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: $white;
+    padding: 0.325rem;
+    border-radius: 3.325rem;
+}
+
+.content {
+    position: absolute;
+    height: 14.625rem;
+    width: 100%;
+    background-color: $white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.about {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.age {
+    padding-left: 0.7rem;
+    font-size: 1.125rem;
+    color: $Darkgrayishblue;
+}
+
+.location {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.875rem;
+    color: $Darkgrayishblue;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    border-top: solid 0.03125rem $Lightgray;
+    border-width: thin;
+    margin-top: 1.5rem;
+}
+
+.stat {
+    width: 5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+
+    p:first-of-type {
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+    p:nth-child(2) {
+        font-size: 0.75rem;
+        color: $Darkgrayishblue;
+        margin-top: 0.5rem;
+    }
+}
+
+.bg_top {
+    width: 978px;
+    height: 978px;
+    object-fit: none;
+    object-position: -450px -500px;
+}
+
+.bg_bottom {
+    object-position: 450px 600px;
 }
